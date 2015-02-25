@@ -24,7 +24,7 @@ public class SwapNodesInPairs {
     public void PrintList(ListNode head ){
         ListNode cur = head;
         while(cur != null){
-            System.out.println(cur.val + " ");
+            System.out.println(cur + " ");
             cur = cur.next;
         }
         
