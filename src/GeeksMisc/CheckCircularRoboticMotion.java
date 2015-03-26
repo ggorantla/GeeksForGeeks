@@ -1,7 +1,4 @@
 package GeeksMisc;
-
-import java.net.NoRouteToHostException;
-
 /**
  * Created by ggorantla on 3/26/2015.
  * http://www.geeksforgeeks.org/check-if-a-given-sequence-of-moves-for-a-robot-is-circular-or-not/* 
@@ -56,11 +53,9 @@ public class CheckCircularRoboticMotion {
                     x--;
             }
         }
-        
-        if (x == 0 && y == 0)
-            return true;
-        
-        return false;
+
+        return x == 0 && y == 0;
+
     }
     
     
@@ -70,7 +65,9 @@ public class CheckCircularRoboticMotion {
         String steps = "GLLG";
         steps = "GLGLGLGL";
         steps = "GLGRGLGLGGLGG";
-        boolean result = new CheckCircularRoboticMotion().isCircularRoboticMotion(steps);
+        boolean result;
+        if (new CheckCircularRoboticMotion().isCircularRoboticMotion(steps)) result = true;
+        else result = false;
         System.out.println(result);
     }
 }
